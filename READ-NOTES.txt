@@ -1,0 +1,4 @@
+- check first task in the button folder
+- to check second task with simple search go to simple-search folder and launch "npm start" command
+or go to simple-search/build folder and open index.html in the browser
+- for searching I used public api for searching movies

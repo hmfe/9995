@@ -1,2 +1,3 @@
 .idea
-/node_modules
+/simple-search/node_modules
+/simple-search/build
