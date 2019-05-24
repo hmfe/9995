@@ -1,0 +1,4 @@
+- check first task in the button folder
+- to check second task with simple search go to simple-search folder and launch:
+ "npm i" and then "npm start" command (nodejs should be installed on the PC)
+- for searching I used public api for searching movies
