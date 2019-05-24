@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import debounce from 'lodash.debounce';
+import PropTypes from 'prop-types';
 
 import { mapDispatchToProps, mapStateToProps } from './state-dispatch-map';
 import Loader from '../Loader';
@@ -14,6 +15,20 @@ const DEBOUNCE_VALUE = 500;
 const ANIMATION_DURATION = 500;
 
 class Search extends React.Component {
+
+    static propTypes = {
+        queryString: PropTypes.string,
+        isFetching: PropTypes.bool,
+        isActive: PropTypes.bool,
+        items: PropTypes.arrayOf(PropTypes.string),
+
+        toggleActive: PropTypes.func,
+        toggleFetching: PropTypes.func,
+        makeSearch: PropTypes.func,
+        setItems: PropTypes.func,
+        saveSearchItem: PropTypes.func,
+        setQueryString: PropTypes.func,
+    };
 
     constructor(props) {
         super(props);
@@ -45,6 +60,10 @@ class Search extends React.Component {
     }
 
     onSearchItemClickHandler(item) {
+        this.props.saveSearchItem({
+            name: item,
+            createdDate: (new Date()).toISOString()
+        });
         this.props.setQueryString(item);
     }
 

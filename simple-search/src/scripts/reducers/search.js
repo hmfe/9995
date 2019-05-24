@@ -12,7 +12,7 @@ const initialState = {
     items: []
 };
 
-const SearchReducer = (state, action) => {
+const SearchReducer = (state = initialState, action) => {
     switch (action.type) {
         case TOGGLE_FETCHING:
             return {
@@ -35,7 +35,7 @@ const SearchReducer = (state, action) => {
                 items: action.payload
             };
         default:
-            return initialState;
+            return state;
     }
 };
 

@@ -25,6 +25,8 @@
     border: 1px solid #ccc;
     background: #fff;
     margin-bottom: 3px;
+    border-radius: 0;
+    -webkit-appearance:none;
 }
 
 .search-section .search-input span {
@@ -62,6 +64,10 @@
     top: 0;
     content: ' ';
     background-color: #a7a6a5;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .search-section .search-input span:before {
@@ -70,6 +76,14 @@
 
 .search-section .search-input span:after {
     transform: rotate(-45deg);
+}
+
+.search-section .search-input span:hover:before {
+    transform: rotate(-45deg);
+}
+
+.search-section .search-input span:hover:after {
+    transform: rotate(45deg);
 }
 
 /* search result */

@@ -5,6 +5,7 @@ import {
     setItems,
     toggleFetching
 } from "../../actions/search";
+import { addItem } from "../../actions/search-history";
 
 export const mapStateToProps = state => {
     const {
@@ -28,4 +29,5 @@ export const mapDispatchToProps = dispatch => ({
     setQueryString: val => dispatch(setQueryString(val)),
     makeSearch: val => dispatch(makeSearch(val)),
     setItems: items => dispatch(setItems(items)),
+    saveSearchItem: item => dispatch(addItem(item)),
 });
